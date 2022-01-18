@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: teal;
+  min-height: 100vh;
+}
+
+.App__image {
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+.App__image.mobile {
+  display: none;
+}
+
+.App__gallery-wrapper {
+  background-color: transparent;
+  border: solid 1px black;
+  width: 95%;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.App__gallery-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 20px;
+  z-index: 9;
+  top: 12px;
+  left: 0px;
+  position: absolute;
+  padding: 12px 20px;
+}
+
+.App__gallery-header .zoom-info {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: aliceblue;
+  background-color: #0000005e;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.App__gallery-header .buttons {
+  display: flex;
+}
+
+.App__gallery-header button {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  outline: solid 3px #0000005e;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+}
+
+.App__gallery-header button:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.App__gallery-header .buttons button:active {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 767px) {
+  .App__image {
+    display: none;
+  }
+  .App__image.mobile {
+    display: block;
+  }
+
+  .App__gallery-header {
+    background-color: #0000005e;
+    backdrop-filter: blur(30px);
+    position: relative;
+    padding: 8px;
+    top: auto;
+    left: auto;
+  }
+}
+
+.App__gallery-content {
+  max-height: 80vh;
+  overflow-y: scroll;
+}
