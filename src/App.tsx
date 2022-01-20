@@ -21,7 +21,7 @@ function App() {
         <div className="App__gallery-content">
           <ZoomableView
             ref={zoomableViewRef}
-            maxScale={5}
+            maxScale={2}
             onZoomChange={setZoom}
           >
             <>

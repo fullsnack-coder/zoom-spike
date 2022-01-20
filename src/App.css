@@ -10,14 +10,15 @@
   align-items: center;
   flex-direction: column;
   background-color: teal;
+  padding: 22px;
   min-height: 100vh;
 }
 
 .App__image {
   height: 100%;
+  width: 100%;
   object-position: center;
   object-fit: cover;
-  width: 100%;
   display: block;
 }
 
@@ -28,7 +29,6 @@
 .App__gallery-wrapper {
   background-color: transparent;
   border: solid 1px black;
-  width: 95%;
   height: fit-content;
   overflow: hidden;
   border-radius: 8px;
@@ -58,6 +58,7 @@
 
 .App__gallery-header .buttons {
   display: flex;
+  align-items: center;
 }
 
 .App__gallery-header button {
@@ -81,6 +82,11 @@
   opacity: 0.8;
 }
 
+.App__gallery-content {
+  max-width: 1007px;
+  max-height: 740px;
+}
+
 @media only screen and (max-width: 767px) {
   .App__image {
     display: none;
@@ -97,9 +103,9 @@
     top: auto;
     left: auto;
   }
-}
 
-.App__gallery-content {
-  max-height: 80vh;
-  overflow-y: scroll;
+  .App__gallery-content {
+    max-width: 540px;
+    max-height: 792px;
+  }
 }
